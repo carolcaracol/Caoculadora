@@ -31,13 +31,19 @@ struct ContentView: View {
             Text("porte")
             // aq vai ficar o segmented control
 
+            if let result {
+                Text("Seu cachorro tem em idade humana:")
+                Text("\(result) anos")
+                
+            } else {
                 Image(ImageResource.clarinha)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxHeight:150)
-                    .frame(maxWidth: .infinity)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxHeight:150)
+                        .frame(maxWidth: .infinity)
                     .shadow(radius: 20)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            }
+            Button(action: {result = 23 }, label: {
                 ZStack{
                     Color.purple
                     /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
